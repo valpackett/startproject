@@ -29,6 +29,7 @@
 (defvar project-starters
   (make-hash-table :test 'equal))
 
+(puthash "anything" "mkdir" project-starters)
 (puthash "django" "django-admin.py startproject" project-starters)
 (puthash "pylons" "paster create -t pylons" project-starters)
 (puthash "sproutcore" "sc-init" project-starters)
