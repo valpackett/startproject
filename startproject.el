@@ -20,11 +20,11 @@
 
 ;;; Commentary:
 
-;; 
+;; Simple project starter. See README.md for more info.
 
 ;;; Code:
 
-(defvar projects-dir "/home/myfreeweb/Dropbox/work/")
+(defvar projects-dir "~/")
 
 (defvar project-starters
   (make-hash-table :test 'equal))
