@@ -12,11 +12,11 @@ Requires a modern **Emacs** and **ido**. ido usually works out of the box, *at l
     (require 'startproject)`
 - bind „start-project“ to some key (I don‘t think you want to M-x all the time), like this:
 
-    `(global-set-key (kbd "C-x p") start-project)`
+    `(global-set-key (kbd "C-x p") 'start-project)`
 - add your own starters if you need them, for example:
 
     `(puthash "html5" "tar -xvf ~/Dropbox/webdev/html5boilerplate.tar.gz" project-starters)`
-- change the work directory — I‘m not sure if you want your projects in ~/:
+- change the work directory — I‘m not sure if you want your projects in ~/. Don‘t forget the /:
 
-    `(setq projects-dir "~/Dropbox/work")`
+    `(setq projects-dir "~/Dropbox/work/")`
 - enjoy it! Also, follow me on Twitter: [english](http://twitter.com/myfreeweb_en) or [russian](http://twitter.com/myfreeweb).
