@@ -15,7 +15,7 @@ Requires a modern **Emacs** and **ido**. ido usually works out of the box, *at l
     `(global-set-key (kbd "C-x p") 'start-project)`
 - add your own starters if you need them, for example:
 
-    `(puthash "html5" "tar -xvf ~/Dropbox/webdev/html5boilerplate.tar.gz" project-starters)`
+    `(puthash "html5" "tar -xvf ~/Dropbox/webdev/[html5boilerplate](http://html5boilerplate.com).tar.gz" project-starters)`
 - change the work directory — I‘m not sure if you want your projects in ~/. Don‘t forget the /:
 
     `(setq projects-dir "~/Dropbox/work/")`
