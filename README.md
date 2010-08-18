@@ -1,7 +1,9 @@
 # startproject #
 Simplest Emacs project starter for all you framework guys — Django, Sproutcore, whatever — they have start commands. Really, the name „startproject“ is from Django‘s script.
 
-Requires a modern Emacs and ido. ido usually works out of the box, at least with GNU Emacs from Ubuntu repos and Aquamacs for Mac.
+It just runs framework's **start command** (or just a simple **tar** command extracting your project skeleton) and opens the newly created project with **dired**.
+
+Requires a modern **Emacs** and **ido**. ido usually works out of the box, *at least* with GNU Emacs from Ubuntu repos and Aquamacs for Mac.
 
 ## How to use it ##
 - require it in your init file (.emacs, config.el, or something else if you‘re very creative)

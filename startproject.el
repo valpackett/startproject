@@ -33,7 +33,8 @@
 (puthash "sproutcore" "sc-init" project-starters)
 
 (defun really-start-project (type name)
-  (shell-command (concat "cd " projects-dir " && " (gethash type project-starters) " " name)))
+  (shell-command (concat "cd " projects-dir " && " (gethash type project-starters) " " name))
+  (dired (concat projects-dir name)))
 
 (defun get-hash-keys (hashtable)
   (let (keys)
