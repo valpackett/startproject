@@ -34,7 +34,7 @@
 (defvar vc-systems
   '("bzr" "hg" "git" "none"))
 
-(defvar sp-open-vc-dir t)
+(defvar sp-open-vc-dir t) ; maybe some users think it's annoying.
 
 (puthash "anything" "mkdir" project-starters)
 (puthash "django" "django-admin.py startproject" project-starters)
@@ -46,7 +46,8 @@
 (defun really-start-project (type vcs name)
   (shell-command (concat "cd " projects-dir " && "
                          (gethash type project-starters) " " name))
-  (if (equal vcs "none") ()
+  (if (equal vcs "none")
+      () ; this is "else", lol. Lisp <3
       (shell-command (concat "cd " projects-dir "/" name " && " vcs " init")))
   (dired (concat projects-dir name))
   (if (equal sp-open-vc-dir t)
