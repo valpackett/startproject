@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'ido)
+(require 'vc nil t) ; optional
 
 (defvar projects-dir "~/")
 
