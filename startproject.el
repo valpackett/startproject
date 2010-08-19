@@ -31,6 +31,9 @@
 (defvar project-starters
   (make-hash-table :test 'equal))
 
+(defvar vc-systems
+  '("bzr" "hg" "git" "none"))
+
 (puthash "anything" "mkdir" project-starters)
 (puthash "django" "django-admin.py startproject" project-starters)
 (puthash "pylons" "paster create -t pylons" project-starters)
@@ -38,8 +41,11 @@
 (puthash "catalyst" "catalyst.pl" project-starters)
 (puthash "sproutcore" "sc-init" project-starters)
 
-(defun really-start-project (type name)
-  (shell-command (concat "cd " projects-dir " && " (gethash type project-starters) " " name))
+(defun really-start-project (type vcs name)
+  (shell-command (concat "cd " projects-dir " && "
+                         (gethash type project-starters) " " name))
+  (if (equal vcs "none") ()
+      (shell-command (concat "cd " projects-dir "/" name " && " vcs " init")))
   (dired (concat projects-dir name)))
 
 (defun get-hash-keys (hashtable)
@@ -53,10 +59,11 @@
   (really-start-project (ido-completing-read
                          "Type: "
                          (get-hash-keys project-starters)
-                         nil
-                         'require-match
-                         nil
-                         nil)
+                         nil 'require-match nil nil)
+                        (ido-completing-read
+                         "VCS: "
+                         vc-systems
+                         nil 'require-match nil nil)
                         name))
 
 (provide 'startproject)
