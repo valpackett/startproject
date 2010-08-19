@@ -34,6 +34,8 @@
 (defvar vc-systems
   '("bzr" "hg" "git" "none"))
 
+(defvar sp-open-vc-dir t)
+
 (puthash "anything" "mkdir" project-starters)
 (puthash "django" "django-admin.py startproject" project-starters)
 (puthash "pylons" "paster create -t pylons" project-starters)
@@ -46,7 +48,9 @@
                          (gethash type project-starters) " " name))
   (if (equal vcs "none") ()
       (shell-command (concat "cd " projects-dir "/" name " && " vcs " init")))
-  (dired (concat projects-dir name)))
+  (dired (concat projects-dir name))
+  (if (equal sp-open-vc-dir t)
+      (vc-dir (concat projects-dir name))))
 
 (defun get-hash-keys (hashtable)
   (let (keys)

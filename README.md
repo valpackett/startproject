@@ -1,7 +1,7 @@
 # startproject #
 Simplest Emacs project starter for all you framework guys — Django, Sproutcore, whatever — they have start commands. Really, the name „startproject“ is from Django‘s script :-)
 
-It just runs framework‘s **start command** (or just a simple **tar** command extracting your project skeleton... or a **mkdir** if you‘re not a framework guy) and opens the newly created project with **dired**.
+It just runs framework‘s **start command** (or just a simple **tar** command extracting your project skeleton... or a **mkdir** if you‘re not a framework guy) and opens the newly created project with **dired**. Also it can initialize version control (bzr/hg/git) and open **vc-dir**.
 
 Requires a modern **Emacs** and **ido**. ido usually works out of the box, *at least* with GNU Emacs from Ubuntu repos and Aquamacs for Mac.
 
@@ -28,6 +28,10 @@ Requires a modern **Emacs** and **ido**. ido usually works out of the box, *at l
 - Q: Why I have to add a command for my favorite framework by hand? It‘s popular.
 
   A: Because I‘m lazy to google these commands for all the mainstream frameworks. Just [email me](mailto:me@myfreeweb.ru) a command for your thing.
+- Q: I don‘t need to open vc-dir! Can I turn it off?
+
+  A: Of course! Just put it in your init file:
+    `(setq sp-open-vc-dir nil)`
 - Q: Why it requires ido?
 
   A: Ido is very awesome! I can‘t believe you don‘t have it installed. It **must** come with your Emacs!
