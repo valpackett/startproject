@@ -34,6 +34,7 @@
 (puthash "anything" "mkdir" project-starters)
 (puthash "django" "django-admin.py startproject" project-starters)
 (puthash "pylons" "paster create -t pylons" project-starters)
+(puthash "rails" "rails" project-starters)
 (puthash "sproutcore" "sc-init" project-starters)
 
 (defun really-start-project (type name)
