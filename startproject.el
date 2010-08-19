@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(require 'ido)
+
 (defvar projects-dir "~/")
 
 (defvar project-starters
