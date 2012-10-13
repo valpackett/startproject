@@ -19,7 +19,7 @@ Requires a modern **Emacs** and **ido**. ido usually works out of the box, *at l
 - change the work directory — I‘m not sure if you want your projects in ~/. **Don‘t forget the slashes!**:
 
     `(setq projects-dir "~/Dropbox/work/")`
-- enjoy it! Also, follow me on Twitter: [english](http://twitter.com/myfreeweb_en) or [russian](http://twitter.com/myfreeweb) and on [Github](http://github.com/myfreeweb).
+- enjoy it!
 
 ## FAQ ##
 - Q: It says something about wrong paths... What the?
